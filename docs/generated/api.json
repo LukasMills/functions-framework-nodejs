@@ -1,0 +1,1966 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.34.4",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@google-cloud/functions-framework!",
+  "docComment": "",
+  "name": "@google-cloud/functions-framework",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@google-cloud/functions-framework!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Variable",
+          "canonicalReference": "@google-cloud/functions-framework!cloudEvent:var",
+          "docComment": "/**\n * Register a function that handles CloudEvents.\n *\n * @param functionName - the name of the function\n *\n * @param handler - the function to trigger when handling CloudEvents\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cloudEvent: "
+            },
+            {
+              "kind": "Content",
+              "text": "<T = unknown>(functionName: string, handler: "
+            },
+            {
+              "kind": "Reference",
+              "text": "CloudEventFunction",
+              "canonicalReference": "@google-cloud/functions-framework!CloudEventFunction:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<T>) => void"
+            }
+          ],
+          "fileUrlPath": "src/function_registry.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "cloudEvent",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!CloudEventFunction:interface",
+          "docComment": "/**\n * A CloudEvent function handler.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CloudEventFunction<T = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "CloudEventFunction",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@google-cloud/functions-framework!CloudEventFunction:call(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(cloudEvent: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CloudEvent",
+                  "canonicalReference": "cloudevents!CloudEventV1:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<T>"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "cloudEvent",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!CloudEventFunctionWithCallback:interface",
+          "docComment": "/**\n * A CloudEvent function handler with callback.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CloudEventFunctionWithCallback<T = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "CloudEventFunctionWithCallback",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@google-cloud/functions-framework!CloudEventFunctionWithCallback:call(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(cloudEvent: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CloudEvent",
+                  "canonicalReference": "cloudevents!CloudEventV1:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<T>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", callback: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Function",
+                  "canonicalReference": "!Function:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "cloudEvent",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "callback",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 4,
+                    "endIndex": 5
+                  },
+                  "isOptional": false
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!CloudFunctionsContext:interface",
+          "docComment": "/**\n * The Cloud Functions context object for the event. {@link https://cloud.google.com/functions/docs/writing/background#function_parameters}\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CloudFunctionsContext "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "CloudFunctionsContext",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!CloudFunctionsContext#eventId:member",
+              "docComment": "/**\n * A unique ID for the event. For example: \"70172329041928\".\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "eventId?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "eventId",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!CloudFunctionsContext#eventType:member",
+              "docComment": "/**\n * The type of the event. For example: \"google.pubsub.topic.publish\".\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "eventType?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "eventType",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!CloudFunctionsContext#resource:member",
+              "docComment": "/**\n * The resource that emitted the event.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "resource?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | {\n        [key: string]: string;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "resource",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!CloudFunctionsContext#timestamp:member",
+              "docComment": "/**\n * The date/time this event was created. For example: \"2018-04-09T07:56:12.975Z\" This will be formatted as ISO 8601.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "timestamp?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "timestamp",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@google-cloud/functions-framework!Context:type",
+          "docComment": "/**\n * The function's context.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type Context = "
+            },
+            {
+              "kind": "Reference",
+              "text": "CloudFunctionsContext",
+              "canonicalReference": "@google-cloud/functions-framework!CloudFunctionsContext:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "CloudEvent",
+              "canonicalReference": "cloudevents!CloudEventV1:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<unknown>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "Context",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!Data:interface",
+          "docComment": "/**\n * A data object used for legacy event functions.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Data "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "Data",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!Data#data:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "data: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "object"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "data",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!EventFunction:interface",
+          "docComment": "/**\n * A legacy event function handler.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface EventFunction "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "EventFunction",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@google-cloud/functions-framework!EventFunction:call(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(data: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", context: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Context",
+                  "canonicalReference": "@google-cloud/functions-framework!Context:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "data",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "context",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!EventFunctionWithCallback:interface",
+          "docComment": "/**\n * A legacy event function handler with callback.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface EventFunctionWithCallback "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "EventFunctionWithCallback",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@google-cloud/functions-framework!EventFunctionWithCallback:call(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(data: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{}"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", context: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Context",
+                  "canonicalReference": "@google-cloud/functions-framework!Context:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", callback: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Function",
+                  "canonicalReference": "!Function:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "data",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "context",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "callback",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@google-cloud/functions-framework!HandlerFunction:type",
+          "docComment": "/**\n * A function handler.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type HandlerFunction<T = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": ", U = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "> = "
+            },
+            {
+              "kind": "Reference",
+              "text": "HttpFunction",
+              "canonicalReference": "@google-cloud/functions-framework!HttpFunction:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "EventFunction",
+              "canonicalReference": "@google-cloud/functions-framework!EventFunction:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "EventFunctionWithCallback",
+              "canonicalReference": "@google-cloud/functions-framework!EventFunctionWithCallback:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "CloudEventFunction",
+              "canonicalReference": "@google-cloud/functions-framework!CloudEventFunction:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<T> | "
+            },
+            {
+              "kind": "Reference",
+              "text": "CloudEventFunctionWithCallback",
+              "canonicalReference": "@google-cloud/functions-framework!CloudEventFunctionWithCallback:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<T> | "
+            },
+            {
+              "kind": "Reference",
+              "text": "TypedFunction",
+              "canonicalReference": "@google-cloud/functions-framework!TypedFunction:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<T, U>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "HandlerFunction",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "typeParameterName": "U",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 17
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@google-cloud/functions-framework!http:var",
+          "docComment": "/**\n * Register a function that responds to HTTP requests.\n *\n * @param functionName - the name of the function\n *\n * @param handler - the function to invoke when handling HTTP requests\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "http: "
+            },
+            {
+              "kind": "Content",
+              "text": "(functionName: string, handler: "
+            },
+            {
+              "kind": "Reference",
+              "text": "HttpFunction",
+              "canonicalReference": "@google-cloud/functions-framework!HttpFunction:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => void"
+            }
+          ],
+          "fileUrlPath": "src/function_registry.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "http",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!HttpFunction:interface",
+          "docComment": "/**\n * A HTTP function handler.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface HttpFunction "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "HttpFunction",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@google-cloud/functions-framework!HttpFunction:call(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(req: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Request",
+                  "canonicalReference": "@google-cloud/functions-framework!Request_2:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", res: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Response",
+                  "canonicalReference": "@types/express!e.Response:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "req",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "res",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!InvocationFormat:interface",
+          "docComment": "/**\n * The contract for a request deserializer and response serializer.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface InvocationFormat<T, U> "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "U",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "InvocationFormat",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@google-cloud/functions-framework!InvocationFormat#deserializeRequest:member(1)",
+              "docComment": "/**\n * Creates an instance of the request type from an invocation request.\n *\n * @param request - the request body as raw bytes\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "deserializeRequest(request: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "InvocationRequest",
+                  "canonicalReference": "@google-cloud/functions-framework!InvocationRequest:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "T | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<T>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "request",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "deserializeRequest"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@google-cloud/functions-framework!InvocationFormat#serializeResponse:member(1)",
+              "docComment": "/**\n * Writes the response type to the invocation result.\n *\n * @param responseWriter - interface for writing to the invocation result\n *\n * @param response - the response object\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "serializeResponse(responseWriter: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "InvocationResponse",
+                  "canonicalReference": "@google-cloud/functions-framework!InvocationResponse:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", response: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "U"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "responseWriter",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "response",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "serializeResponse"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!InvocationRequest:interface",
+          "docComment": "/**\n * InvocationRequest represents the properties of an invocation over HTTP.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface InvocationRequest "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "InvocationRequest",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@google-cloud/functions-framework!InvocationRequest#body:member(1)",
+              "docComment": "/**\n * Returns the request body as either a string or a Buffer if the body is binary.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "body(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Buffer",
+                  "canonicalReference": "!\"\\\"buffer\\\"\".__global.Buffer:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [],
+              "name": "body"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@google-cloud/functions-framework!InvocationRequest#header:member(1)",
+              "docComment": "/**\n * Header returns the value of the specified header\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "header(header: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "header",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "header"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!InvocationResponse:interface",
+          "docComment": "/**\n * InvocationResponse interface describes the properties that can be set on an invocation response.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface InvocationResponse "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "InvocationResponse",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@google-cloud/functions-framework!InvocationResponse#end:member(1)",
+              "docComment": "/**\n * Ends the response, must be called once at the end of writing.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "end(data: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Buffer",
+                  "canonicalReference": "!\"\\\"buffer\\\"\".__global.Buffer:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "data",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "end"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@google-cloud/functions-framework!InvocationResponse#setHeader:member(1)",
+              "docComment": "/**\n * Sets a header on the response.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "setHeader(key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", value: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "value",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "setHeader"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@google-cloud/functions-framework!InvocationResponse#write:member(1)",
+              "docComment": "/**\n * Writes a chunk of data to the response.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "write(data: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Buffer",
+                  "canonicalReference": "!\"\\\"buffer\\\"\".__global.Buffer:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "data",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 3
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "write"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@google-cloud/functions-framework!JsonInvocationFormat:class",
+          "docComment": "/**\n * Default invocation format for JSON requests.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class JsonInvocationFormat<T, U> implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "InvocationFormat",
+              "canonicalReference": "@google-cloud/functions-framework!InvocationFormat:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<T, U>"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "U",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "isAbstract": false,
+          "name": "JsonInvocationFormat",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@google-cloud/functions-framework!JsonInvocationFormat#deserializeRequest:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "deserializeRequest(request: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "InvocationRequest",
+                  "canonicalReference": "@google-cloud/functions-framework!InvocationRequest:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "T"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "request",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "deserializeRequest"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@google-cloud/functions-framework!JsonInvocationFormat#serializeResponse:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "serializeResponse(responseWriter: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "InvocationResponse",
+                  "canonicalReference": "@google-cloud/functions-framework!InvocationResponse:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", response: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "U"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "responseWriter",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "response",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "serializeResponse"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 3
+            }
+          ]
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@google-cloud/functions-framework!LegacyCloudFunctionsContext:type",
+          "docComment": "/**\n * A legacy event function context.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type LegacyCloudFunctionsContext = "
+            },
+            {
+              "kind": "Reference",
+              "text": "CloudFunctionsContext",
+              "canonicalReference": "@google-cloud/functions-framework!CloudFunctionsContext:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Data",
+              "canonicalReference": "@google-cloud/functions-framework!Data:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "LegacyCloudFunctionsContext",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!LegacyEvent:interface",
+          "docComment": "/**\n * A legacy event.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface LegacyEvent "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "LegacyEvent",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!LegacyEvent#context:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "context: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CloudFunctionsContext",
+                  "canonicalReference": "@google-cloud/functions-framework!CloudFunctionsContext:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "context",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!LegacyEvent#data:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "data: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        [key: string]: any;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "data",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!Request_2:interface",
+          "docComment": "/**\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Request extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "ExpressRequest",
+              "canonicalReference": "@types/express!e.Request:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "name": "Request_2",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!Request_2#rawBody:member",
+              "docComment": "/**\n * A buffer which provides access to the request's raw HTTP body.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "rawBody?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Buffer",
+                  "canonicalReference": "!\"\\\"buffer\\\"\".__global.Buffer:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "rawBody",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@google-cloud/functions-framework!typed:var",
+          "docComment": "/**\n * Register a function that handles strongly typed invocations.\n *\n * @param functionName - the name of the function\n *\n * @param handler - the function to trigger\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "typed: "
+            },
+            {
+              "kind": "Content",
+              "text": "<T, U>(functionName: string, handler: "
+            },
+            {
+              "kind": "Reference",
+              "text": "TypedFunction",
+              "canonicalReference": "@google-cloud/functions-framework!TypedFunction:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<T, U> | ((req: T) => U | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<U>)) => void"
+            }
+          ],
+          "fileUrlPath": "src/function_registry.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "typed",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 6
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@google-cloud/functions-framework!TypedFunction:interface",
+          "docComment": "/**\n * A Typed function handler that may return a value or a promise.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface TypedFunction<T = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": ", U = "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "> "
+            }
+          ],
+          "fileUrlPath": "src/functions.ts",
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "typeParameterName": "U",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            }
+          ],
+          "name": "TypedFunction",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!TypedFunction#format:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "format: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "InvocationFormat",
+                  "canonicalReference": "@google-cloud/functions-framework!InvocationFormat:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<T, U>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "format",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@google-cloud/functions-framework!TypedFunction#handler:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "handler: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(req: T) => U | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<U>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "handler",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        }
+      ]
+    }
+  ]
+}
